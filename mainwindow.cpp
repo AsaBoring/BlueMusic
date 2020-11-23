@@ -7,5 +7,6 @@ MainWindow::MainWindow(QWidget *parent)
 
 MainWindow::~MainWindow()
 {
+    printf("hello world");
 }
 
