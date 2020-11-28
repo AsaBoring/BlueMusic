@@ -1,11 +1,13 @@
-#include "mainwindow.h"
-
 #include <QApplication>
+
+#include "View.h"
+#include "ProcessModel.h"
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    MainWindow w;
+    View w;
+    ProcessModel pm(&w);
     w.show();
     return a.exec();
 }

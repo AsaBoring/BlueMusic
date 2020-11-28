@@ -17,12 +17,18 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp
 
-HEADERS += \
-    mainwindow.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+INCLUDEPATH += $$PWD/ProcessModel
+include(ProcessModel/ProcessModel.pri)
+
+INCLUDEPATH += $$PWD/View
+include(View/View.pri)
+
+INCLUDEPATH += $$PWD/Common
+include(Common/Common.pri)
